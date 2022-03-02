@@ -51,6 +51,12 @@ You should not attempt to directly assign the value 20 to `total`.
 assert(!__helpers.removeWhiteSpace(code).match(/total[=+-]0*[1-9]+/gm));
 ```
 
+You should be using the elements of `myArr` to update `total`.
+
+```js
+assert(!__helpers.removeWhiteSpace(code).match(/total[+=-]+\S*myArr\[\w[\w\d]*\]/gm));
+```
+
 # --seed--
 
 ## --after-user-code--
